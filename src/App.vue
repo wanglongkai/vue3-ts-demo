@@ -1,5 +1,4 @@
 <script setup lang="ts">
-var rr = 'www';
 </script>
 
 <template>
