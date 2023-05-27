@@ -9,8 +9,4 @@ import HeaderW from '@/components/Header/index.vue'
   </h1>
 </template>
 
-<style scoped lang="scss">
-.title {
-  color: red;
-}
-</style>
+<style scoped lang="scss"></style>

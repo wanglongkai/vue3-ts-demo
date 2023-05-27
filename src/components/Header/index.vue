@@ -3,7 +3,13 @@
 </script>
 
 <template>
-  this is header page;
+  <p class="color">
+    this is header page;
+  </p>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.color {
+  color: $themecolor;
+}
+</style>
