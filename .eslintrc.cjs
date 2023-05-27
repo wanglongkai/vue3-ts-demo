@@ -23,6 +23,7 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
-        "no-var": "error"
+        "no-var": "error",
+        "vue/multi-word-component-names": "off"
     }
 }
