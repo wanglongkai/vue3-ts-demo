@@ -32,3 +32,19 @@
    >commit前执行eslint检验 
 6. 执行`npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"' `
    > commit前校验commit的message格式 
+
+## 路径别名配置
+```js
+// vite.config.ts
+resolve: {
+  alias: {
+    '@': path.resolve(__dirname, 'src')
+  }
+}
+
+//tsconfig.json
+"baseUrl": "./",
+"paths": {
+  "@/*":["src/*"],
+}
+```
