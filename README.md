@@ -64,3 +64,8 @@ resolve: {
       }),
     ],
    ```
+
+## iconfont字体图标引入
+symbol方式引入
+1. 在阿里字体官网下载iconfont.js,并全局引入
+2. 封装svg-icon组件，注意` <use :xlink:href="xxx" />`中`xxx`是直接写入`#字体图标名称`，不要加其他前缀
