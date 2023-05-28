@@ -24,6 +24,7 @@ module.exports = {
     ],
     "rules": {
         "no-var": "error",
-        "vue/multi-word-component-names": "off"
+        "vue/multi-word-component-names": "off",
+        "vue/max-attributes-per-line": "off"
     }
 }
