@@ -1,14 +1,25 @@
 import path from 'path';
 import { viteMockServe } from "vite-plugin-mock";
 import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
-export default {
+export default defineConfig({
+  base: './',
   plugins: [
     vue(),
     viteMockServe({
       mockPath: "./mock",//设置mock文件存储目录
       localEnabled: true,//设置是否启用本地mock文件
       logger: true,//是否在控制台显示请求日志
+    }),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
     }),
   ],
   resolve: {
@@ -24,4 +35,4 @@ export default {
       },
     }
   }
-}
+})

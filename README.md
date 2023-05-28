@@ -69,3 +69,6 @@ resolve: {
 symbol方式引入
 1. 在阿里字体官网下载iconfont.js,并全局引入
 2. 封装svg-icon组件，注意` <use :xlink:href="xxx" />`中`xxx`是直接写入`#字体图标名称`，不要加其他前缀
+
+## element_plus按需引入
+按照文档配置后，按需引入时，**不用在特别import组件，可以直接使用，就像全局组件一样**。
