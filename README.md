@@ -48,3 +48,19 @@ resolve: {
   "@/*":["src/*"],
 }
 ```
+
+## mock服务配置
+1. 安装依赖
+`pnpm i vite-plugin-mock@2 mockjs -D`
+2. 配置`vite.config.ts`：
+   ```js
+    import { viteMockServe } from "vite-plugin-mock";
+    plugins: [
+      //...
+      viteMockServe({
+        mockPath: "./mock",//设置mock文件存储目录
+        localEnabled: true,//设置是否启用本地mock文件
+        logger: true,//是否在控制台显示请求日志
+      }),
+    ],
+   ```
