@@ -6,7 +6,7 @@ import SvgIcon from '@/components/SvgIcon/index.vue';
 import { Edit, Loading } from '@element-plus/icons-vue';
 import piao from '@/assets/piao.jpeg';
 onMounted(() => {
-  axios.get("/api/user/getuserinfo").then(res => {
+  axios.get("/api/posts").then(res => {
     console.log(res, 7)
   })
 })
