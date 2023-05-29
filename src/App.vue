@@ -7,7 +7,8 @@ import { Edit, Loading } from '@element-plus/icons-vue';
 import piao from '@/assets/piao.jpeg';
 onMounted(() => {
   axios.get("/api/posts").then(res => {
-    console.log(res, 7)
+    console.log(res, 7);
+    console.log(import.meta.env.VITE_TEST, 11);
   })
 })
 </script>
