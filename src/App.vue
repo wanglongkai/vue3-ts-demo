@@ -1,16 +1,43 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import axios from 'axios';
 import HeaderW from '@/components/Header/index.vue';
 import SvgIcon from '@/components/SvgIcon/index.vue';
 import { Edit, Loading } from '@element-plus/icons-vue';
 import piao from '@/assets/piao.jpeg';
+import TreeComponent from '@/components/TreeComponent/TreeComponent.vue';
 onMounted(() => {
   axios.get("/api/posts").then(res => {
     console.log(res, 7);
     console.log(import.meta.env.VITE_TEST, 11);
   })
 })
+interface ITreeData {
+  title: string,
+  key: number,
+  children?: ITreeData[]
+}
+const treedData = ref<ITreeData[]>([
+  {
+    title: '叶子1',
+    key: 1,
+    children: [
+      { title: '叶子1-1', key: 4 }
+    ]
+  },
+  {
+    title: '叶子2',
+    key: 2
+  },
+  {
+    title: '叶子3',
+    key: 2,
+    children: [
+      { title: '叶子3-1', key: 5 },
+      { title: '叶子3-2', key: 5 }
+    ]
+  },
+])
 </script>
 
 <template>
@@ -25,6 +52,7 @@ onMounted(() => {
     </el-icon>
     <HeaderW />
     <SvgIcon icon-name="crmico-xiangmuguanli" />
+    <TreeComponent :data="treedData" />
   </h1>
 </template>
 

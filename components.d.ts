@@ -14,5 +14,6 @@ declare module '@vue/runtime-core' {
     ElPagination: typeof import('element-plus/es')['ElPagination']
     Header: typeof import('./src/components/Header/index.vue')['default']
     SvgIcon: typeof import('./src/components/SvgIcon/index.vue')['default']
+    TreeComponent: typeof import('./src/components/TreeComponent/TreeComponent.vue')['default']
   }
 }

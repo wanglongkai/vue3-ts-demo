@@ -33,7 +33,8 @@ export default defineConfig({
         javascriptEnabled: true,
         additionalData: '@import "./src/styles/variables.scss";',
       },
-    }
+    },
+    devSourcemap: true, //是否开启css开发时sourcemap
   },
   server: {
     proxy: {
