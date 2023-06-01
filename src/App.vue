@@ -59,6 +59,8 @@ const treedData = ref<ITreeData[]>([
 <style scoped lang="scss">
 .title {
   color: red;
+  user-select: none;
+  width: clamp(100px, 30%, 300px);
 }
 
 .icons {

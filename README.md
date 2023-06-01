@@ -79,3 +79,11 @@ symbol方式引入
 ## 环境变量配置
 .env.xxx文件    
 **默认情况下，新建的VITE_开头的变量没有ts提示，如果需要提示可以安装官方文件配置下**
+
+## postcss配置
+postcss可以理解为css后处理器，它处理less、scss等预处理器处理过后的css。比如：    
+1. 增加浏览器厂商前缀
+2. css语法降价
+3. ....
+最常用的postcss插件：`postcss-preset-env`;    
+具体的配置方法请查看[postcss官方配置](https://github.com/postcss/postcss/blob/main/docs/README-cn.md)
