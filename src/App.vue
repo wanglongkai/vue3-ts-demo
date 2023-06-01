@@ -6,6 +6,7 @@ import SvgIcon from '@/components/SvgIcon/index.vue';
 import { Edit, Loading } from '@element-plus/icons-vue';
 import piao from '@/assets/piao.jpeg';
 import TreeComponent from '@/components/TreeComponent/TreeComponent.vue';
+import { forEach } from 'lodash';
 onMounted(() => {
   axios.get("/api/posts").then(res => {
     console.log(res, 7);
@@ -38,6 +39,12 @@ const treedData = ref<ITreeData[]>([
     ]
   },
 ])
+
+
+forEach({ 'a': 1, 'b': 2 }, function (value: number, key) {
+  console.log(key, value);
+});
+
 </script>
 
 <template>

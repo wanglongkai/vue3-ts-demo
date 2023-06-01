@@ -50,5 +50,15 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, '')
       }
     }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          lodash: ['lodash'],
+          element_plus: ['element-plus']
+        }
+      }
+    }
   }
 })

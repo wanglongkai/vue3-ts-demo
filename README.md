@@ -87,3 +87,19 @@ postcss可以理解为css后处理器，它处理less、scss等预处理器处�
 3. ....
 最常用的postcss插件：`postcss-preset-env`;    
 具体的配置方法请查看[postcss官方配置](https://github.com/postcss/postcss/blob/main/docs/README-cn.md)
+
+## 构建优化-分包
+使用rollup分包策略进行分包，具体参考[rollup拆分公共chunk文档](https://cn.rollupjs.org/configuration-options/#output-manualchunks)
+
+```js
+build: {
+  rollupOptions: {
+    output: {
+      manualChunks: {
+        lodash: ['lodash'],
+        element_plus: ['element-plus']
+      }
+    }
+  }
+}
+```
