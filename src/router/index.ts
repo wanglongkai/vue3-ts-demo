@@ -31,6 +31,12 @@ export const routes = [
     name: 'customref',
     title: 'customRef',
     component: () => import('@/views/customRef/index.vue')
+  },
+  {
+    path: '/mitt',
+    name: 'mitt',
+    title: 'mitt',
+    component: () => import('@/views/mitt/index.vue')
   }
 ]
 
