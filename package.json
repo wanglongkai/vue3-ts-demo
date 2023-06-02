@@ -16,7 +16,8 @@
     "element-plus": "^2.3.5",
     "lodash": "^4.17.21",
     "sass": "^1.62.1",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",

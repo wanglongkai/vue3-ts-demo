@@ -18,13 +18,21 @@ function onClick() {
 </script>
 
 <template>
-  <p v-debounce-click:200="onClick" class="color">
-    this is header page;
-  </p>
+  <h1>自定义指令</h1>
+  <pre>
+    快速点击按钮，200ms内只出发一次事件
+  </pre>
+  <el-button v-debounce-click:200="onClick" class="color">
+    快速点击我！
+  </el-button>
 </template>
 
 <style lang="scss" scoped>
+h1{
+  margin-bottom: 15px;
+}
 .color {
-  color: $themecolor;
+  // 全局变量使用
+  color: $themecolor; 
 }
 </style>

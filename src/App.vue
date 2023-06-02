@@ -1,77 +1,60 @@
-<script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import axios from 'axios';
-import HeaderW from '@/components/Header/index.vue';
-import SvgIcon from '@/components/SvgIcon/index.vue';
-import { Edit, Loading } from '@element-plus/icons-vue';
-import piao from '@/assets/piao.jpeg';
-import TreeComponent from '@/components/TreeComponent/TreeComponent.vue';
-import { forEach } from 'lodash';
-onMounted(() => {
-  axios.get("/api/posts").then(res => {
-    console.log(res, 7);
-    console.log(import.meta.env.VITE_TEST, 11);
-  })
-})
-interface ITreeData {
-  title: string,
-  key: number,
-  children?: ITreeData[]
+<script setup lang='ts'>
+import { routes } from '@/router'
+import { useRouter } from 'vue-router'
+const router = useRouter();
+const handleItemClick = (item: any) => {
+  router.replace(item.index);
 }
-const treedData = ref<ITreeData[]>([
-  {
-    title: '叶子1',
-    key: 1,
-    children: [
-      { title: '叶子1-1', key: 4 }
-    ]
-  },
-  {
-    title: '叶子2',
-    key: 2
-  },
-  {
-    title: '叶子3',
-    key: 2,
-    children: [
-      { title: '叶子3-1', key: 5 },
-      { title: '叶子3-2', key: 5 }
-    ]
-  },
-])
-
-
-forEach({ 'a': 1, 'b': 2 }, function (value: number, key) {
-  console.log(key, value);
-});
-
 </script>
 
 <template>
-  <h1 class="title">
-    <img :src="piao" alt="">
-    hello vue3
-    <el-button type="primary">Primary</el-button>
-    <el-pagination layout="prev, pager, next" :total="1000" />
-    <Edit class="icons" />
-    <el-icon class="is-loading">
-      <Loading />
-    </el-icon>
-    <HeaderW />
-    <SvgIcon icon-name="crmico-xiangmuguanli" />
-    <TreeComponent :data="treedData" />
-  </h1>
+  <div class="mainbox">
+    <div class="left-menu">
+      <el-menu 
+        active-text-color="#ffd04b"
+        background-color="#545c64"
+        class="el-menu-vertical-demo"
+        default-active="2"
+        text-color="#fff"
+      >
+        <el-menu-item 
+          v-for="route in routes" 
+          :key="route.path" 
+          :index="route.path"
+          @click="handleItemClick"
+        >
+          <span>{{ route.title }}</span>
+        </el-menu-item>
+      </el-menu>
+    </div>
+    <!-- 一级路由：框架入口 -->
+    <div class="right-content">
+      <router-view v-slot="{Component}">
+        <keep-alive>
+          <component :is="Component" />
+        </keep-alive>
+      </router-view>
+    </div>
+  </div>
 </template>
 
-<style scoped lang="scss">
-.title {
-  color: red;
-  user-select: none;
-  width: clamp(100px, 30%, 300px);
+<style lang="scss" scoped>
+.mainbox {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.icons {
-  width: 30px;
-  height: 30px;
+.left-menu {
+  width: 200px;
+  .el-menu{
+    height: 100%;
+  }
+}
+
+.right-content {
+  flex: 1 1 auto;
+  padding: 15px;
+  overflow: auto;
 }
 </style>
