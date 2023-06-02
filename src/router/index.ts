@@ -25,6 +25,12 @@ export const routes = [
     name: 'cursive',
     title: '递归组件',
     component: () => import('@/views/cursiveComponent/index.vue')
+  },
+  {
+    path: '/customref',
+    name: 'customref',
+    title: 'customRef',
+    component: () => import('@/views/customRef/index.vue')
   }
 ]
 

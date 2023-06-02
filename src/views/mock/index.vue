@@ -1,12 +1,11 @@
 <script setup lang='ts'>
-import { onMounted, ref} from 'vue';
+import { ref } from 'vue';
 import axios from 'axios';
 const envConstant = ref(import.meta.env.VITE_TEST)
 const list = ref<{id: number, title: string}[]>([]);
-onMounted(() => {
-  axios.get("/api/posts").then(res => {
-    list.value = res.data;
-  })
+
+axios.get("/api/posts").then(res => {
+  list.value = res.data;
 })
 </script>
 
