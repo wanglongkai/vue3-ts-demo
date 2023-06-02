@@ -37,6 +37,12 @@ export const routes = [
     name: 'mitt',
     title: 'mitt',
     component: () => import('@/views/mitt/index.vue')
+  },
+  {
+    path: '/hooks',
+    name: 'hooks',
+    title: '组合式函数',
+    component: () => import('@/views/hooks/index.vue')
   }
 ]
 
