@@ -1,6 +1,8 @@
 <script setup lang='ts'>
 import SvgIcon from '@/components/SvgIcon/index.vue';
 import { Edit, Loading } from '@element-plus/icons-vue';
+import { useNamespace } from 'element-plus';
+const ns = useNamespace('w-icons');
 
 </script>
 
@@ -12,6 +14,7 @@ import { Edit, Loading } from '@element-plus/icons-vue';
     <el-icon class="is-loading">
       <Loading />
     </el-icon>
+    <p :class="[ns.b()]">test</p>
   </div>
 </template>
 
@@ -25,5 +28,8 @@ $m_color: map.merge($font, ('color': blue));
 .icons {
   width: 30px;
   height: 30px;
+}
+@include b(w-icons){
+  font-size: 25px;
 }
 </style>

@@ -103,3 +103,31 @@ build: {
   }
 }
 ```
+
+## 使用element_plus的BEM css命名思路
+1. 引入`useNamespace`,并生成命名空间(前缀)
+```js
+import { useNamespace } from 'element-plus';
+const ns = useNamespace('w-icons'); // 使用element_plus的默认全局命令空间，解析class为：el-w-icons
+const ns = useNamespace('w-icons', ref('wlk')); // 自定义命令空间，解析class为：wlk-w-icons
+```
+2. 样式文件：
+```css
+<style lang="scss" scoped>
+  /* 不适用自定义命名空间 */
+  @include b(w-icons){
+    font-size: 25px;
+  }
+
+  /* 使用自定义命名空间 */
+  $namespace: wlk;
+  @include b(w-icons){   /* 这里的b混合是全局引入了element_plus定义的mixins, vite.config.ts的 @use "element-plus/theme-chalk/src/mixins/mixins" as *; */
+    font-size: 25px;
+  }
+</style>
+```
+3. 模版文件：
+```html
+<!-- 产生一个BEM的B -->
+<p :class="[ns.b()]">test</p>
+```

@@ -32,7 +32,10 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         javascriptEnabled: true,
-        additionalData: `@use "./src/styles/variables.scss" as *;`,
+        additionalData: `
+          @use "./src/styles/variables.scss" as *;
+          @use "element-plus/theme-chalk/src/mixins/mixins" as *;
+        `,
       },
     },
     postcss: {
