@@ -16,8 +16,11 @@ import { Edit, Loading } from '@element-plus/icons-vue';
 </template>
 
 <style lang="scss" scoped>
+@use 'sass:map';
+$font: (color: red, size: 25px);
+$m_color: map.merge($font, ('color': blue));
 .svgbox{
-  color: red;
+  color: map-get($m_color, 'color');
 }
 .icons {
   width: 30px;
