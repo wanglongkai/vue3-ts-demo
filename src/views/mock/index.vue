@@ -4,7 +4,7 @@ import axios from 'axios';
 const envConstant = ref(import.meta.env.VITE_TEST)
 const list = ref<{id: number, title: string}[]>([]);
 
-axios.get("/api/posts").then(res => {
+axios.post("/api/user/getuserinfo", {name: 'wlk'}).then(res => {
   list.value = res.data;
 })
 </script>
