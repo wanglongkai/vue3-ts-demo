@@ -15,6 +15,7 @@ const ns = useNamespace('w-icons');
       <Loading />
     </el-icon>
     <p :class="[ns.b()]">test</p>
+    <el-button>点我</el-button>
   </div>
 </template>
 
@@ -24,6 +25,9 @@ $font: (color: red, size: 25px);
 $m_color: map.merge($font, ('color': blue));
 .svgbox{
   color: map-get($m_color, 'color');
+  ::v-deep(.el-button){
+    color: pink;
+  }
 }
 .icons {
   width: 30px;

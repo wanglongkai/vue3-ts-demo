@@ -131,3 +131,10 @@ const ns = useNamespace('w-icons', ref('wlk')); // 自定义命令空间，解�
 <!-- 产生一个BEM的B -->
 <p :class="[ns.b()]">test</p>
 ```
+
+## 样式穿透
+```scss
+::v-deep(.el-button){
+  color: pink;
+}
+```
