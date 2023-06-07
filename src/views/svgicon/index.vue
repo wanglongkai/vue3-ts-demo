@@ -25,7 +25,7 @@ $font: (color: red, size: 25px);
 $m_color: map.merge($font, ('color': blue));
 .svgbox{
   color: map-get($m_color, 'color');
-  ::v-deep(.el-button){
+  :deep(.el-button){
     color: pink;
   }
 }

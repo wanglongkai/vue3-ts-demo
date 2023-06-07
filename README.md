@@ -134,7 +134,7 @@ const ns = useNamespace('w-icons', ref('wlk')); // 自定义命令空间，解�
 
 ## 样式穿透
 ```scss
-::v-deep(.el-button){
+:deep(.el-button){
   color: pink;
 }
 ```

@@ -43,6 +43,12 @@ export const routes = [
     name: 'hooks',
     title: '组合式函数',
     component: () => import('@/views/hooks/index.vue')
+  },
+  {
+    path: '/echarts',
+    name: 'echarts',
+    title: 'echarts图表',
+    component: () => import('@/views/echarts/index.vue')
   }
 ]
 
