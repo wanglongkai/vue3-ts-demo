@@ -1,5 +1,5 @@
 <template>
-<div id="main-echart"></div>  
+  <div id="main-echart" />
 </template>
     
 <script setup lang='ts'>
