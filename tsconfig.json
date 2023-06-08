@@ -23,7 +23,10 @@
     "baseUrl": "./",
     "paths": {
       "@/*":["src/*"],
-    }
+    },
+
+    // 让element_plus有提示
+    "types": ["element-plus/global"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]

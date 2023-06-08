@@ -55,6 +55,12 @@ export const routes = [
     name: 'store',
     title: 'store状态管理',
     component: () => import('@/views/store/index.vue')
+  },
+  {
+    path: '/form',
+    name: 'form',
+    title: 'elemnt表单',
+    component: () => import('@/views/form/index.vue')
   }
 ]
 
