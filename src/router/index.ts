@@ -49,6 +49,12 @@ export const routes = [
     name: 'echarts',
     title: 'echarts图表',
     component: () => import('@/views/echarts/index.vue')
+  },
+  {
+    path: '/store',
+    name: 'store',
+    title: 'store状态管理',
+    component: () => import('@/views/store/index.vue')
   }
 ]
 
