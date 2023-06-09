@@ -61,6 +61,12 @@ export const routes = [
     name: 'form',
     title: 'elemnt表单',
     component: () => import('@/views/form/index.vue')
+  },
+  {
+    path: '/vmodel',
+    name: 'vmodel',
+    title: 'v-modle',
+    component: () => import('@/views/vmodel/index.vue')
   }
 ]
 
