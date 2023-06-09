@@ -67,6 +67,12 @@ export const routes = [
     name: 'vmodel',
     title: 'v-modle',
     component: () => import('@/views/vmodel/index.vue')
+  },
+  {
+    path: '/teleport',
+    name: 'teleport',
+    title: '传送门',
+    component: () => import('@/views/teleport/index.vue')
   }
 ]
 

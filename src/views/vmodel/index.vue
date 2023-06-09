@@ -7,9 +7,13 @@ const count = ref('');
 
 <template>
   {{ count }}
-  <CustomInput v-model:count="count" />
+  <div class="outer">
+    <CustomInput v-model:count="count" />
+  </div>
 </template>
 
 <style lang="scss" scoped>
-  
+  .outer{
+    transform: translateY(50%);
+  }
 </style>

@@ -10,9 +10,13 @@ import { useVModel } from '@vueuse/core'
 </script>
 
 <template>
-  <input v-model="count" type="text" />
+  <input v-model="count" type="text" class="inner" />
 </template>
 
 <style lang="scss" scoped>
-  
+  .inner{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+  }
 </style>
