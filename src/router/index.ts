@@ -73,7 +73,13 @@ export const routes = [
     name: 'teleport',
     title: '传送门',
     component: () => import('@/views/teleport/index.vue')
-  }
+  },
+  {
+    path: '/computed',
+    name: 'computed',
+    title: '计算属性',
+    component: () => import('@/views/computed/index.vue')
+  },
 ]
 
 const router = createRouter({
