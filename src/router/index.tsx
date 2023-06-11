@@ -86,6 +86,12 @@ export const routes = [
     title: '动态组件,transition,keepalive',
     component: () => import('@/views/eventemit/index.vue')
   },
+  {
+    path: '/dynamicCss',
+    name: 'dynamicCss',
+    title: '动态css',
+    component: () => import('@/views/dynamicCss/index.vue')
+  },
 ]
 
 const router = createRouter({
