@@ -46,7 +46,7 @@ const handleItemClick = (item: any) => {
 }
 
 .left-menu {
-  width: 200px;
+  width: 250px;
   .el-menu{
     height: 100%;
   }

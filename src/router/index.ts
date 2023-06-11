@@ -80,6 +80,12 @@ export const routes = [
     title: '计算属性',
     component: () => import('@/views/computed/index.vue')
   },
+  {
+    path: '/iscomponent',
+    name: 'iscomponent',
+    title: '动态组件,transition,keepalive',
+    component: () => import('@/views/eventemit/index.vue')
+  },
 ]
 
 const router = createRouter({
