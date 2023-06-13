@@ -11,7 +11,7 @@ setInterval(() => {
 <template>
   <p class="dycolor">hello</p>
   <hr />
-  <p>tsx组件</p>
+  <p class="text-red mb-20" style="width: 100px;">tsx组件</p>
   <Tpp />
 </template>
 

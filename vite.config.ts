@@ -7,12 +7,14 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import PostCssEnv from 'postcss-preset-env';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+import UnoCSS from 'unocss/vite'
 
 export default defineConfig({
   base: './',
   plugins: [
     vue(),
     vueJsx(),
+    UnoCSS(),
     viteMockServe({
       mockPath: "./mock",//设置mock文件存储目录
       localEnabled: true,//设置是否启用本地mock文件
