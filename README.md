@@ -138,3 +138,12 @@ const ns = useNamespace('w-icons', ref('wlk')); // 自定义命令空间，解�
   color: pink;
 }
 ```
+
+## vscode unocss插件不生效
+- unocss插件是需要寻找到uno.config.ts文件才能生效的，所以一定要有该文件。
+- 同时，在monorepo或者workspace模式下，需要在setting.json中配置uno.config.ts的路径。
+  ```js
+  "unocss.root": [
+      "D:/code/vue3-ts-demo", "D:/code/wicv-front-admin"
+  ],
+  ```
