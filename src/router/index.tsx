@@ -92,6 +92,12 @@ export const routes = [
     title: '动态css',
     component: () => import('@/views/dynamicCss/index.vue')
   },
+  {
+    path: '/amap',
+    name: 'amap',
+    title: '高德地图API',
+    component: () => import('@/views/amap/index.vue')
+  },
 ]
 
 const router = createRouter({
