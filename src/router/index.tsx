@@ -98,6 +98,12 @@ export const routes = [
     title: '高德地图API',
     component: () => import('@/views/amap/index.vue')
   },
+  {
+    path: '/menu',
+    name: 'menu',
+    title: '全部组件路径',
+    component: () => import('@/views/menus/index.vue')
+  },
 ]
 
 const router = createRouter({

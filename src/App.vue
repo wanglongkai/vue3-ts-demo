@@ -8,14 +8,14 @@ const handleItemClick = (item: any) => {
 </script>
 
 <template>
-  <div class="mainbox">
-    <div class="left-menu">
+  <div class="h-100% flex justify-between">
+    <el-scrollbar class="bg-#545c64">
       <el-menu 
         active-text-color="#ffd04b"
         background-color="#545c64"
-        class="el-menu-vertical-demo"
         default-active="/"
         text-color="#fff"
+        class="border-transparent"
       >
         <el-menu-item 
           v-for="route in routes" 
@@ -26,9 +26,9 @@ const handleItemClick = (item: any) => {
           <span>{{ route.title }}</span>
         </el-menu-item>
       </el-menu>
-    </div>
+    </el-scrollbar>
     <!-- 一级路由：框架入口 -->
-    <div class="right-content">
+    <div class="flex-auto p-15px overflow-auto">
       <router-view v-slot="{Component}">
         <keep-alive>
           <component :is="Component" />
@@ -37,24 +37,3 @@ const handleItemClick = (item: any) => {
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped>
-.mainbox {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.left-menu {
-  width: 250px;
-  .el-menu{
-    height: 100%;
-  }
-}
-
-.right-content {
-  flex: 1 1 auto;
-  padding: 15px;
-  overflow: auto;
-}
-</style>
