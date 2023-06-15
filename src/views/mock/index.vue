@@ -1,22 +1,18 @@
 <script setup lang='ts'>
 import { ref } from 'vue';
-import axios from 'axios';
+import { postUserInfo } from '@/api/userApi';
 const envConstant = ref(import.meta.env.VITE_TEST)
-const list = ref<{id: number, title: string}[]>([]);
+const list = ref<number[]>([]);
 
-axios.post("/api/user/getuserinfo", {name: 'wlk'}).then(res => {
+postUserInfo({name: 'wlk'}).then(res => {
   list.value = res.data;
 })
 </script>
 
 <template>
-  <h1>Mock及.env环境变量</h1>
-  <p>环境变量: import.meta.env.VITE_TEST-->{{ envConstant }}</p>
-  <li v-for="item in list" :key="item.id">{{ item.title }}</li>
+  <h1 class="mb-15px">Mock及.env环境变量</h1>
+  <p class="mb-15px">
+    环境变量: import.meta.env.VITE_TEST-->{{ envConstant }}
+  </p>
+  <li v-for="item in list" :key="item">{{ item }}</li>
 </template>
-
-<style lang="scss" scoped>
-  h1, p{
-    margin-bottom: 15px;
-  }
-</style>
