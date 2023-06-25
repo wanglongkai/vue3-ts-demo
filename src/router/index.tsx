@@ -104,6 +104,12 @@ export const routes = [
     title: '全部组件路径',
     component: () => import('@/views/menus/index.vue')
   },
+  {
+    path: '/md',
+    name: 'md',
+    title: 'markdown',
+    component: () => import('@/views/markdown/index.vue')
+  },
 ]
 
 const router = createRouter({
