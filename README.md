@@ -1,4 +1,19 @@
 # vue3项目实战
+## VSCODE插件
+1. vue3-snippets-for-vscode
+2. Vue Language Features(Volar)
+3. TypeScript Vue Plugin(Volar)
+4. Vue Peek
+5. Auto Rename Tag
+6. Auto Import
+7. CSS Class Intellisense
+8. ESLint
+9. Git Graph
+10. Git History
+11. Peacock 开多个窗口是，便于区分
+12. UnoCSS unocss提示工具
+13. Chinese 汉化
+14. Better Comments 注释高亮
 ## eslint配置
 1. 安装eslint
 `pnpm i eslint -D`
