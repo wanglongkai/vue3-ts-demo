@@ -14,6 +14,7 @@
 12. UnoCSS unocss提示工具
 13. Chinese 汉化
 14. Better Comments 注释高亮
+15. JSON to TS 根据json文件自动生成ts类型
 ## eslint配置
 1. 安装eslint
 `pnpm i eslint -D`
