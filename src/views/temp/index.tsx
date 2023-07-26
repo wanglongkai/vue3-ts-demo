@@ -2,7 +2,7 @@ import { ref, defineComponent} from "vue";
 import { ElButton } from 'element-plus';
 
 export default defineComponent({
-  setup(props, ctx){
+  setup(){
     const count = ref(1)
     const handleChage = () => {
       count.value++;
