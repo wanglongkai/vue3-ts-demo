@@ -30,9 +30,9 @@ const handleItemClick = (item: any) => {
     <!-- 一级路由：框架入口 -->
     <div class="flex-auto p-15px overflow-auto">
       <router-view v-slot="{Component}">
-        <keep-alive>
+        <!-- <keep-alive> -->
           <component :is="Component" />
-        </keep-alive>
+        <!-- </keep-alive> -->
       </router-view>
     </div>
   </div>

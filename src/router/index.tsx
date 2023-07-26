@@ -3,6 +3,12 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 export const routes = [
   {
+    path: '/nexttick',
+    name: 'temp',
+    title: '临时',
+    component: () => import('@/views/temp/index.tsx')
+  },
+  {
     path: '/',
     name: 'svgicon',
     title: 'SVGicon',

@@ -8,6 +8,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import PostCssEnv from 'postcss-preset-env';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import UnoCSS from 'unocss/vite'
+import ElementPlus from 'unplugin-element-plus/vite';
 
 export default defineConfig({
   base: './',
@@ -26,6 +27,7 @@ export default defineConfig({
     Components({
       resolvers: [ElementPlusResolver()],
     }),
+    ElementPlus({})
   ],
   resolve: {
     alias: {

@@ -28,6 +28,7 @@ module.exports = {
         "vue/max-attributes-per-line": "off",
         "vue/singleline-html-element-content-newline": "off",
         "vue/html-self-closing": "off",
-        "vue/attributes-order": "off"
+        "vue/attributes-order": "off",
+        "vue/no-v-html": "off"
     }
 }

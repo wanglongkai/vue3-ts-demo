@@ -5,6 +5,8 @@ import './lib/iconfont.js' // 阿里字体图标文件 symbol格式
 import { createPinia } from 'pinia'
 import 'virtual:uno.css'
 
+// import 'element-plus/dist/index.css'
+
 import router from './router';
 const pinia = createPinia();
 

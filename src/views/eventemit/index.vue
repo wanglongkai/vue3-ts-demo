@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { shallowRef, defineAsyncComponent } from 'vue';
+import { shallowRef, defineAsyncComponent, onBeforeUnmount, onUnmounted } from 'vue';
 import type {Component } from 'vue';
 const Child = defineAsyncComponent(() => import('./child.vue'));
 const Child2 = defineAsyncComponent(() => import('./child2.vue'));
@@ -9,6 +9,13 @@ const showComponent = shallowRef<Component>(Child);
 const changeComponnet = (component: Component) => {
   showComponent.value = component
 }
+
+onBeforeUnmount(() => {
+  console.log(`父->output->beforeUmount`)
+})
+onUnmounted(() => {
+  console.log('父->output->onUnounted')
+})
 </script>
 
 <template>
@@ -17,9 +24,9 @@ const changeComponnet = (component: Component) => {
   <ElButton @click="changeComponnet(Child3)">组件3</ElButton>
   <hr>
   <Transition name="fade" mode="out-in">
-    <KeepAlive>
+    <!-- <KeepAlive> -->
       <component :is="showComponent"></component>
-    </KeepAlive>
+    <!-- </KeepAlive> -->
   </Transition>
 </template>
 
